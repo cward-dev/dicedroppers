@@ -4,38 +4,26 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Homepage from "./Homepage";
+import Home from "./Home";
 import Blog from "./Blog";
 import Episodes from "./Episodes";
 import CampaignNotes from "./CampaignNotes";
 import MeetTheCrew from "./MeetTheCrew";
 
+/*
+  A <Switch> looks through its children <Route>s and 
+  renders the first one that matches the current URL.
+*/
 function MyRouter() {
 
   return (
-    <Router>
-      <div>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/meet-the-crew">
-            <MeetTheCrew />
-          </Route>
-          <Route path="/campaign-notes">
-            <CampaignNotes />
-          </Route>
-          <Route path="/episodes">
-            <Episodes />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/">
-            <Homepage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <Switch>
+      <Route path="/meet-the-crew" component={MeetTheCrew} />
+      <Route path="/campaign-notes" component={CampaignNotes} />
+      <Route path="/episodes" component={Episodes} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/" component={Home} />
+    </Switch>
   );
 
 }

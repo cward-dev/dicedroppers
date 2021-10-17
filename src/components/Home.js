@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Homepage() {
+function Home() {
 
   const [menuSelection, setMenuSelection] = useState(0);
 
@@ -19,4 +19,4 @@ function Homepage() {
 
 }
 
-export default Homepage;
+export default Home;

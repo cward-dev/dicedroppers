@@ -1,15 +1,23 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import Nav from './components/Nav';
 import MyRouter from './components/MyRouter';
-import Homepage from './components/Homepage';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Homepage />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <MyRouter />
+      </div>
+    </Router>
   );
 }
 
