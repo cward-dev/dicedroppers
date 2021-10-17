@@ -1,50 +1,57 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Dice Droppers</a>
+        <a className="navbar-brand" href="/">Dice Droppers</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Blog</a>
+              <a className="nav-link" href="/blog">Blog</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Episodes</a>
+              <a className="nav-link" href="/episodes">Episodes</a>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="/campaign-notes" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Campaign Notes
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><span className="dropdown-item bg-dark text-light border-0">The World</span></li>
-                <li><a className="dropdown-item" href="#">The Continent</a></li>
-                <li><a className="dropdown-item" href="#">The Factions</a></li>
-                <li><a className="dropdown-item" href="#">The Baddies</a></li>
-                <li><span className="dropdown-item bg-dark text-light border-0">The Recap</span></li>
-                <li><a className="dropdown-item" href="#">Chapter One</a></li>
-                <li><a className="dropdown-item" href="#">Chapter Two</a></li>
-                <li><a className="dropdown-item" href="#">Chapter Three</a></li>
+                <li><a className="dropdown-item bg-dark text-light border-0" href="/campaign-notes/the-world">The World</a></li>
+                <li><a className="dropdown-item" href="/campaign-notes/the-world/the-continent">The Continent</a></li>
+                <li><a className="dropdown-item" href="/campaign-notes/the-world/the-factions">The Factions</a></li>
+                <li><a className="dropdown-item" href="/campaign-notes/the-world/the-baddies">The Baddies</a></li>
+                <li><a className="dropdown-item bg-dark text-light border-0" href="/campaign-notes/the-recap">The Recap</a></li>
+                <li><a className="dropdown-item" href="/campaign-notes/the-recap/chapter-one">Chapter One</a></li>
+                <li><a className="dropdown-item" href="/campaign-notes/the-recap/chapter-two">Chapter Two</a></li>
+                <li><a className="dropdown-item" href="/campaign-notes/the-recap/chapter-three">Chapter Three</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="/meet-the-crew" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Meet The Crew
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><span className="dropdown-item bg-dark text-light border-0">The Dungeon Master</span></li>
-                <li><a className="dropdown-item" href="#">Lawson</a></li>
+                <li><a className="dropdown-item" href="/meet-the-crew/lawson">Lawson</a></li>
                 <li><span className="dropdown-item bg-dark text-light border-0">The Cast</span></li>
-                <li><a className="dropdown-item" href="#">Chris</a></li>
-                <li><a className="dropdown-item" href="#">Fabbs</a></li>
-                <li><a className="dropdown-item" href="#">Hailey</a></li>
-                <li><a className="dropdown-item" href="#">Luke</a></li>
-                <li><a className="dropdown-item" href="#">Oscar</a></li>
+                <li><a className="dropdown-item" href="/meet-the-crew/chris">Chris</a></li>
+                <li><a className="dropdown-item" href="/meet-the-crew/fabbs">Fabbs</a></li>
+                <li><a className="dropdown-item" href="/meet-the-crew/hailey">Hailey</a></li>
+                <li><a className="dropdown-item" href="/meet-the-crew/luke">Luke</a></li>
+                <li><a className="dropdown-item" href="/meet-the-crew/oscar">Oscar</a></li>
               </ul>
             </li>
           </ul>
