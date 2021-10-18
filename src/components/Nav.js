@@ -4,11 +4,19 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import "../css/Nav.css";
 
 function Nav() {
+  const logoPath = "/images/logo.png";
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container-fluid">
+        <div className="mx-2">
+          <Link>
+            <img id="navbar-logo" src={logoPath} alt="Logo" to="/" />
+          </Link>
+        </div>
         <Link className="navbar-brand" to="/">Dice Droppers</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
