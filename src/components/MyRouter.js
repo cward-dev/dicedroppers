@@ -8,7 +8,7 @@ import Home from "./Home";
 import Blog from "./Blog";
 import Episodes from "./Episodes";
 import CampaignNotes from "./CampaignNotes";
-import MeetTheCrew from "./MeetTheCrew";
+import MeetTheCrew from "../pages/meet-the-crew/meet-the-crew";
 
 /*
   A <Switch> looks through its children <Route>s and 

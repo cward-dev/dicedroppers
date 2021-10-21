@@ -1,0 +1,33 @@
+.card {
+  transition: 0.3s;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.25);
+}
+
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content-container {
+  padding: 2px 16px;
+  background-color: #fafafa;
+}
+
+a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #00000f;
+}

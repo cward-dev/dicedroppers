@@ -1,0 +1,5 @@
+.grid {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0 15px;
+}

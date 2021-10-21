@@ -4,7 +4,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import "../css/Nav.css";
+import "./Nav.css";
 
 function Nav() {
   const logoPath = "/images/logo.png";
@@ -13,8 +13,8 @@ function Nav() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container-fluid">
         <div className="mx-2">
-          <Link>
-            <img id="navbar-logo" src={logoPath} alt="Logo" to="/" />
+          <Link to="/">
+            <img className="topnav-logo" src={logoPath} alt="Logo" />
           </Link>
         </div>
         <Link className="navbar-brand" to="/">Dice Droppers</Link>
@@ -47,20 +47,8 @@ function Nav() {
                 <li><Link className="dropdown-item" to="/campaign-notes/the-recap/chapter-three">Chapter Three</Link></li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/meet-the-crew" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Meet The Crew
-              </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><span className="dropdown-item bg-dark text-light border-0">The Dungeon Master</span></li>
-                <li><Link className="dropdown-item" to="/meet-the-crew/lawson">Lawson</Link></li>
-                <li><span className="dropdown-item bg-dark text-light border-0">The Cast</span></li>
-                <li><Link className="dropdown-item" to="/meet-the-crew/chris">Chris</Link></li>
-                <li><Link className="dropdown-item" to="/meet-the-crew/fabbs">Fabbs</Link></li>
-                <li><Link className="dropdown-item" to="/meet-the-crew/hailey">Hailey</Link></li>
-                <li><Link className="dropdown-item" to="/meet-the-crew/luke">Luke</Link></li>
-                <li><Link className="dropdown-item" to="/meet-the-crew/oscar">Oscar</Link></li>
-              </ul>
+            <li className="nav-item">
+              <Link className="nav-link" to="/meet-the-crew">Meet The Crew</Link>
             </li>
           </ul>
           <form className="d-flex">
