@@ -7,8 +7,11 @@ import {
 } from "react-router-dom";
 import Card from "../Card/Card.js";
 import "./Grid.css";
+import useWindowDimensions from "../../hooks/useWindowDimensions.js";
 
-function Grid(props) {
+function Grid() {
+
+  const { height, width } = useWindowDimensions();
 
   const DATA = [
     {
@@ -43,23 +46,28 @@ function Grid(props) {
     },
   ];
 
+  var columns = 3;
+  if (width < 400) {
+    columns = 1;
+  } else if (width < 800) {
+    columns = 2;
+  }
+
   var cardCount = DATA.length;
-  var rowsCount = Math.floor(cardCount / props.columnCount);
-  var stragglerCount = DATA.length % props.columnCount;
+  var rowsCount = Math.floor(cardCount / columns);
   
   var rows = [];
   for (var i = 0; i < rowsCount; i++) {
     var newRow = [];
-    for (var j = 0; j < props.columnCount; j++) {
+    for (var j = 0; j < columns; j++) {
       var newItem = DATA.shift();
       newRow.push(newItem);
     }
     rows.push(newRow);
   }
+  rows.push(DATA);
 
   const makeCard = (card) => {
-    console.log("card:")
-    console.log(card);
     return (
       <td>
         <Link key={card.name} to={`/meet-the-crew/${card.name}`}>
@@ -70,23 +78,18 @@ function Grid(props) {
   }
 
   const makeRow = (row) => {
-    console.log("row:")
-    console.log(row);
-    const rowie = (
+    const newRow = (
       <tr>
         {row.map(card => makeCard(card))}
       </tr>
     );
-    console.log(rowie);
-    return rowie;
+    return newRow;
   };
 
   return (
-    <div>
-      <table className="grid">
-        <tbody>
-          {rows.map(row => makeRow(row))}
-        </tbody>
+    <div className="grid">
+      <table>
+        {rows.map(row => makeRow(row))}
       </table>
     </div>
   );

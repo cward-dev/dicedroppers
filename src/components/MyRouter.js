@@ -4,10 +4,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Home from "./Home";
-import Blog from "./Blog";
-import Episodes from "./Episodes";
-import CampaignNotes from "./CampaignNotes";
+import Home from "../pages/home/home";
+import Blog from "../pages/blog/blog";
+import Episodes from "../pages/episodes/episodes";
+import CampaignNotes from "../pages/campaign-notes/campaign-notes";
 import MeetTheCrew from "../pages/meet-the-crew/meet-the-crew";
 
 /*

@@ -1,7 +1,7 @@
 .card {
   transition: 0.3s;
   width: 100%;
-  overflow: hidden;
+  min-width: 100px;
 }
 
 .card:hover {
@@ -23,8 +23,10 @@
 }
 
 .content-container {
-  padding: 2px 16px;
-  background-color: #fafafa;
+  padding-top: 10px;
+  background-color: var(--white);
+  white-space: no-wrap;
+  overflow: hidden;
 }
 
 a:link, a:hover, a:visited, a:active {

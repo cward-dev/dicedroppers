@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100%;
+  padding: 15px 10%;
+}
+
+.footer-contents {
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.f1 {
+  text-align: left;
+}
+
+.f2 {
+  text-align: center;
+}
+
+.f3 {
+  text-align: right;
+}
+
+.f1, .f2, .f3 {
+  display: inline-block;
+  width: 33%;
+}

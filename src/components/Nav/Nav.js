@@ -10,7 +10,7 @@ function Nav() {
   const logoPath = "/images/logo.png";
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark sticky-top">
       <div className="container-fluid">
         <div className="mx-2">
           <Link to="/">
