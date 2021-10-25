@@ -3,13 +3,15 @@ import "../pages.css";
 import "./home.css";
 
 function Home() {
-  
+
   return (
     <div className="page">
-      <div className="page-block">
-        <img className="logo" src="/images/logo.png" />
-        <h1 className="display-4">Dice Droppers</h1>
-        <p className="lead">Welcome, adventurer.</p>
+      <div className="wrapper">
+        <div className="splash">
+          <img className="logo" src="/images/logo.png" />
+          <h1>Dice Droppers</h1>
+          <p>Welcome, adventurer.</p>
+        </div>
       </div>
     </div>
   );

@@ -1,14 +1,19 @@
 .footer {
   background-color: var(--black);
   color: var(--white);
-  width: 100%;
-  padding: 15px 10%;
 }
 
-.footer-contents {
+.footer-wrapper {
   max-width: 1500px;
-  height: 100%;
   margin: 0 auto;
+  padding: 10px !important;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media(min-width: 960px) {
+  .footer-wrapper {
+    width: 960px;
+  }
 }
 
 .f1 {

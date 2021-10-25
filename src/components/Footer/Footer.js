@@ -5,13 +5,14 @@ import {
   Link
 } from "react-router-dom";
 import "./Footer.css";
+import "../../pages/pages.css";
 
 function Footer() {
   const logoPath = "/images/logo.png";
 
   return (
     <div className="footer">
-      <div className="footer-contents">
+      <div className="wrapper footer-wrapper">
         <p className="f1">
           
         </p>

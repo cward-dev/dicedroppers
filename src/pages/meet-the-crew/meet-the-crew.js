@@ -13,9 +13,9 @@ function MeetTheCrew() {
 
   return (
     <div className="page">
-      <div className="page-block">
-        <h1 className="display-4">Meet The Crew</h1>
-        <p className="lead">Get to know us.</p>
+      <div className="wrapper">
+        <h1>Meet The Crew</h1>
+        <p>Get to know us.</p>
         <Grid />
       </div>
     </div>

@@ -47,7 +47,7 @@ function Grid() {
   ];
 
   var columns = 3;
-  if (width < 400) {
+  if (width < 600) {
     columns = 1;
   } else if (width < 800) {
     columns = 2;

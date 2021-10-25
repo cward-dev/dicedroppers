@@ -1,13 +1,20 @@
 .page {
-  background-color: #646E78;
-  padding: 5% 10% 5% 10%;
+  background-color: var(--white);
   overflow: hidden;
+  caret-color: var(--white);
 }
 
-.page-block {
-  background-color: var(--white);
-  padding: 30px;
-  box-shadow: 0 8px 16px 0 #242424;
-  max-width: 1500px;
+.wrapper {
+  /* background-color: var(--test); */
   margin: 0 auto;
+  text-align: left;
+  padding: 5%;
+  font-size: 16px;
+}
+
+@media(min-width: 960px) {
+  .wrapper {
+    width: 960px;
+    padding: 40px;
+  }
 }

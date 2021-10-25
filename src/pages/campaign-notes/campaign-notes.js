@@ -5,9 +5,9 @@ function CampaignNotes() {
 
   return (
     <div className="page">
-      <div className="page-block">
-        <h1 className="display-4">Campaign Notes</h1>
-        <p className="lead">Get up to speed.</p>
+      <div className="wrapper">
+        <h1>Campaign Notes</h1>
+        <p>Get up to speed.</p>
       </div>
     </div>
   );

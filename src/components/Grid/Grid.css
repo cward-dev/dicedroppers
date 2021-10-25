@@ -1,8 +1,5 @@
 .grid {
-  width: 50%;
   table-layout: fixed;
   border-spacing: 0 15px;
-  overflow-y: auto;
-  max-width: 1000px;
   margin: 0 auto;
 }
