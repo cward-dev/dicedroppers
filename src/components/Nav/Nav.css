@@ -6,49 +6,94 @@
 }
 
 .nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   background-color: var(--black);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
 }
 
 .nav-logo-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 10px;
-}
-
-.nav-item-left {
-  float: left;
-}
-
-.nav-item-right {
-  float: right;
-}
-
-.nav-item a {
   height: 100%;
-  color: var(--white) !important;
-  padding: 14px 16px;
-  text-decoration: none;
+  display: flex;
+  flex-flow: row flex-start;
 }
 
-.nav-item a:hover:not(.active) {
-  background-color: var(--true-black);
+.nav-logo-link {
+  height: 100%;
+  padding: 0 0 0 10px;
+  display: block;
+  align-self: center;
+}
+
+.nav-logo {
+  height: 100%;
+  width: 100%;
+  margin: auto 0px;
+}
+
+.nav-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  text-decoration: none;
+  color: var(--white) !important;
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+}
+
+.nav-item {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  text-decoration: none;
+  color: var(--white) !important;
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
 }
 
 .active {
   background-color: var(--primary);
+}
+
+.nav-item:hover:is(.active) {
+  background-color: var(--primary-dark);
+}
+
+.nav-item:hover:not(.active) {
+  background-color: var(--true-black);
+}
+
+.icon {
+  display: none;
+  margin-left: auto;
+}
+
+@media(max-width: 960px) {
+  .nav-item:not(.sticky):not(.icon) {
+    display: none;
+  }
+  .icon {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media(max-width: 960px) {
+  .nav.responsive {
+    display: block;
+  }
+  .nav.responsive .nav-item.icon {
+    display: none;
+  }
+  .nav.responsive .nav-item {
+    display: block;
+    text-align: left;
+  }
+  .nav.responsive .sticky {
+    display: flex;
+  }
+  .nav.responsive .nav-logo-link {
+    display: flex;
+  }
 }
