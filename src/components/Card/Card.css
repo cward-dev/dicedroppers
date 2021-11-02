@@ -2,7 +2,10 @@
   transition: 0.3s;
   width: 100%;
   min-width: 100px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
+  margin: 20px 0;
 }
 
 .card:hover {
@@ -11,6 +14,8 @@
 
 .card img {
   width: 100%;
+  min-width: 100%;
+  min-height: 100%;
   transition: transform 0.3s ease;
 }
 
@@ -20,12 +25,14 @@
 
 .img-container {
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 .content-container {
-  padding-top: 10px;
-  background-color: var(--white);
+  padding: 10px;
+  background-color: var(--black);
+  color: var(--white);
   white-space: no-wrap;
   overflow: hidden;
 }

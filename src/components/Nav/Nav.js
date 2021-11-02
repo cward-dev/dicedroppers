@@ -7,6 +7,7 @@ import {
   NavLink
 } from "react-router-dom";
 import "./Nav.css";
+import useWindowDimensions from "../../hooks/useWindowDimensions.js";
 
 function useEventListener(eventName, handler, element = window) {
   const savedHandler = useRef();
@@ -28,18 +29,21 @@ function useEventListener(eventName, handler, element = window) {
 }
 
 function Nav() {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleLink = () => {
-    setIsActive(false);
-  };
-
+  const [ isActive, setIsActive ] = useState(false);
+  const { height, width } = useWindowDimensions();
+  
   const handleIcon = () => {
-    setIsActive(isActive ? false : true);
+    if (isActive) {
+      setIsActive(false);
+    } else {
+      setIsActive(true);
+    }
   };
 
   const handler = () => {
-    setIsActive(false);
+    if (isActive) {
+      setTimeout(setIsActive, 0);
+    }
   };
 
   useEventListener("mouseup", handler);
@@ -47,20 +51,23 @@ function Nav() {
   const logoPath = "/images/logo.png";
 
   return (
-    <div className={`nav${isActive ? " responsive" : ""}`} id="myNav">
+    <div className={`nav`} id="myNav">
       <div className="nav-logo-container">
         <Link to="/" className="sticky nav-logo-link" exact={true}><img className="nav-logo" src={logoPath} alt="Logo" /></Link>
         <Link to="/" className="sticky nav-name" exact={true}>Dice Droppers</Link>
+        <a href="javascript:void(0);" className="icon" onClick={handleIcon}>
+          <i className="fa fa-bars" />
+        </a>
       </div>
-      <NavLink to="/" className="nav-item home" exact={true}>Home</NavLink>
-      <NavLink to="/blog" className="nav-item">Blog</NavLink>
-      <NavLink to="/episodes" className="nav-item">Episodes</NavLink>
-      <NavLink to="/campaign-notes" className="nav-item">Campaign Notes</NavLink>
-      <NavLink to="/meet-the-crew" className="nav-item">Meet The Crew</NavLink>
-      <NavLink to="/search" className="nav-item">Search</NavLink>
-      <a href="javascript:void(0);" className="nav-item icon" onClick={handleIcon}>
-        <i className="fa fa-bars" />
-      </a>
+      {isActive || width > 960? 
+        <div className={`links-container${isActive ? " active" : " inactive"}`}>
+          <NavLink to="/" className="nav-item home" exact={true}>Home</NavLink>
+          <NavLink to="/blog" className="nav-item">Blog</NavLink>
+          <NavLink to="/episodes" className="nav-item">Episodes</NavLink>
+          <NavLink to="/campaign-notes" className="nav-item">Campaign Notes</NavLink>
+          <NavLink to="/meet-the-crew" className="nav-item">Meet The Crew</NavLink>
+          <NavLink to="/search" className="nav-item">Search</NavLink>
+        </div> : null}
     </div>
   );
 }
