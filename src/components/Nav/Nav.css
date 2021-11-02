@@ -18,7 +18,7 @@
   height: 100%;
   display: flex;
   flex-flow: row flex-start;
-  animation: fadeRight 750ms ease-out backwards;
+  animation: fadeRight 500ms ease-out backwards;
 }
 
 .nav-logo-link {
