@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Lawson",
+    "imageFile": "img_avatar.png",
+    "role": "DM",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum urna id risus finibus, ac pulvinar mauris congue. Nullam velit eros, tincidunt laoreet congue sed, placerat in sapien. In vel neque vel turpis mollis porttitor at a sapien. Aliquam condimentum, velit in vehicula rhoncus, odio augue placerat nisl, ac feugiat velit odio ut ipsum."
+  },
+  {
+    "name": "Chris",
+    "imageFile": "img_avatar.png",
+    "role": "Player",
+    "description": "Aliquam at ligula augue. In molestie nec dolor vel porttitor. Proin sit amet gravida arcu. Donec egestas porta turpis quis gravida. Praesent blandit bibendum purus et bibendum. In felis mi, finibus sed arcu nec, vehicula vulputate orci."
+  },
+  {
+    "name": "Fabbs",
+    "imageFile": "img_avatar.png",
+    "role": "Player",
+    "description": "Donec at porta justo. Etiam elit purus, blandit vel posuere ut, ultrices ut augue. In varius ullamcorper risus nec viverra. In sit amet lacus hendrerit, maximus purus non, iaculis odio."
+  },
+  {
+    "name": "Hailey",
+    "imageFile": "img_avatar.png",
+    "role": "Player",
+    "description": "Nam tincidunt nibh ut neque pharetra, at pretium ex rutrum. Proin bibendum mi id orci pharetra vehicula nec nec ex. Duis ex libero, lacinia efficitur eleifend sit amet, auctor non massa."
+  },
+  {
+    "name": "Luke",
+    "imageFile": "img_avatar.png",
+    "role": "Player",
+    "description": "Etiam aliquet luctus massa eu scelerisque. Proin tristique lacus vitae arcu rhoncus sagittis. Suspendisse tempor interdum nisi, a porta nisl varius id. Pellentesque vel tincidunt magna, vel semper ex."
+  },
+  {
+    "name": "Oscar",
+    "imageFile": "img_avatar.png",
+    "role": "Player",
+    "description": "Curabitur quis ante dui. Mauris quis lacus commodo, efficitur nulla vel, cursus elit. Proin faucibus sed diam non dapibus. Curabitur scelerisque massa id dui cursus consectetur. Mauris egestas sem nec turpis interdum, eget tristique eros varius. Sed sed commodo eros."
+  }
+]

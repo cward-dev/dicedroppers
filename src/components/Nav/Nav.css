@@ -17,6 +17,7 @@
   height: 100%;
   display: flex;
   flex-flow: row flex-start;
+  animation: fadeRight 750ms ease-out backwards;
 }
 
 .nav-logo-link {
@@ -77,12 +78,22 @@
 
 .links-container {
   display: flex;
-  animation: fadeIn 500ms ease-out backwards;
+  animation: fadeLeft 750ms ease-out backwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeLeft {
   from {
     transform: translateX(100%);
+    opacity: 0;
+  } to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(-100%);
     opacity: 0;
   } to {
     transform: translateX(0);
@@ -97,7 +108,7 @@
   .nav-logo-container {
     width: 100%;
     background-color: var(--black);
-    z-index: 1;
+    z-index: 3;
   }
   .links-container * {
     display: none;
@@ -109,7 +120,16 @@
     display: block;
     background-color: var(--black);
   }
-  @keyframes fadeIn {
+  @keyframes fadeLeft {
+    from {
+      transform: translateY(-100%);
+      opacity: 1;
+    } to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeRight {
     from {
       transform: translateY(-100%);
       opacity: 1;
@@ -125,6 +145,8 @@
     display: flex;
     flex-flow: row wrap;
     width: 100%;
+    position: absolute;
+    z-index: 2;
   }
   .links-container.active * {
     display: flex;

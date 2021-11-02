@@ -16,7 +16,10 @@ function Card(props) {
         </div>
         <div className="content-container">
           <h4><b>{props.name}</b></h4> 
-          <p>{props.description}</p> 
+          <p>{props.role}</p>
+          <div className="description-container">
+            <p>{props.description}</p> 
+          </div>
         </div>
       </div>
     </Link>

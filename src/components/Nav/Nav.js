@@ -40,13 +40,20 @@ function Nav() {
     }
   };
 
-  const handler = () => {
+  const clickHandler = () => {
     if (isActive) {
       setTimeout(setIsActive, 0);
     }
   };
 
-  useEventListener("mouseup", handler);
+  const resizeHandler = () => {
+    if (width > 960) {
+      setTimeout(setIsActive, 0);
+    }
+  };
+
+  useEventListener("mouseup", clickHandler);
+  useEventListener("resize", resizeHandler);
 
   const logoPath = "/images/logo.png";
 
