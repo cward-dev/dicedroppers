@@ -1,0 +1,16 @@
+{
+  "General": {
+    "Title": "Karst Sunborne",
+    "Type": "Player Character",
+    "Status": "Alive",
+    "Played_By": "Chris Ward",
+    "Image_Path": "/images/half-orc.jpeg"
+  },
+  "Character": {
+    "Aliases": "Darklander",
+    "Race": "Half-Orc",
+    "Class": "Twilight Cleric",
+    "Alignment": "Neutral Good",
+    "Homeland": "The Wastelands"
+  }
+}

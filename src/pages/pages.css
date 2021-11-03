@@ -9,13 +9,14 @@
   text-align: left;
   padding: 40px;
   font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   animation: fadeIn 300ms ease-out backwards;
   z-index: -2;
 }
 
 @keyframes fadeIn {
   from {
-    transform: translateY(100%);
+    transform: translateY(100vh);
     opacity: 1;
   } to {
     transform: translateY(0);

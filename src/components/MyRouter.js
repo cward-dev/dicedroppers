@@ -19,7 +19,7 @@ function MyRouter() {
 
   return (
     <Switch>
-      <Route path="/wiki" component={WikiHome} />
+      <Route path="/wiki/Karst_Sunborne" component={WikiHome} />
       <Route path="/meet-the-crew" component={MeetTheCrew} />
       <Route path="/campaign-notes" component={CampaignNotes} />
       <Route path="/episodes" component={Episodes} />

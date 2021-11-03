@@ -10,6 +10,17 @@
   -moz-transition: all 0.0s ;
   -o-transition: all 0.0s ;
   transition: all 0.0s;
+  animation: rotate 1.3s ease-out backwards;
+}
+
+@keyframes rotate {
+  0% {}
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .logo.clicked {
