@@ -73,6 +73,7 @@ function Nav() {
           <NavLink to="/episodes" className="nav-item">Episodes</NavLink>
           <NavLink to="/campaign-notes" className="nav-item">Campaign Notes</NavLink>
           <NavLink to="/meet-the-crew" className="nav-item">Meet The Crew</NavLink>
+          <NavLink to="/wiki" className="nav-item">Wiki</NavLink>
           <NavLink to="/search" className="nav-item">Search</NavLink>
         </div> : null}
     </div>

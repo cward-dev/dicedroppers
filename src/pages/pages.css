@@ -5,12 +5,11 @@
 }
 
 .wrapper {
-  /* background-color: var(--test); */
   margin: 0 auto;
   text-align: left;
-  padding: 5%;
+  padding: 40px;
   font-size: 16px;
-  animation: fadeIn 500ms ease-out backwards;
+  animation: fadeIn 300ms ease-out backwards;
   z-index: -2;
 }
 

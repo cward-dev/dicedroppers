@@ -9,6 +9,7 @@ import Blog from "../pages/blog/blog";
 import Episodes from "../pages/episodes/episodes";
 import CampaignNotes from "../pages/campaign-notes/campaign-notes";
 import MeetTheCrew from "../pages/meet-the-crew/meet-the-crew";
+import WikiHome from "../pages/wiki/wiki-home";
 
 /*
   A <Switch> looks through its children <Route>s and 
@@ -18,6 +19,7 @@ function MyRouter() {
 
   return (
     <Switch>
+      <Route path="/wiki" component={WikiHome} />
       <Route path="/meet-the-crew" component={MeetTheCrew} />
       <Route path="/campaign-notes" component={CampaignNotes} />
       <Route path="/episodes" component={Episodes} />

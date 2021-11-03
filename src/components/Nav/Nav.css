@@ -18,7 +18,7 @@
   height: 100%;
   display: flex;
   flex-flow: row flex-start;
-  animation: fadeRight 500ms ease-out backwards;
+  animation: fadeRight 300ms ease-out backwards;
 }
 
 .nav-logo-link {
@@ -75,11 +75,12 @@
   color: var(--white) !important;
   text-align: center;
   padding: 14px 16px;
+  animation: fadeLeft 500ms ease-out backwards;
 }
 
 .links-container {
   display: flex;
-  animation: fadeLeft 750ms ease-out backwards;
+  animation: fadeLeft 500ms ease-out backwards;
 }
 
 @keyframes fadeLeft {
@@ -94,15 +95,15 @@
 
 @keyframes fadeRight {
   from {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     opacity: 0;
   } to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-@media(max-width: 960px) {
+@media(max-width: 1000px) {
   .nav {
     background-color: transparent;
   }
@@ -141,7 +142,7 @@
   }
 }
 
-@media(max-width: 960px) {
+@media(max-width: 1000px) {
   .links-container.active {
     display: flex;
     flex-flow: row wrap;

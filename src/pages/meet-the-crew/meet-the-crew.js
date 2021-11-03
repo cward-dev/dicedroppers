@@ -1,5 +1,6 @@
 import Card from "../../components/Card/Card.js";
 import "../pages.css";
+import WikiPage from "../wiki/wiki-page.js";
 
 function MeetTheCrew() {
 
