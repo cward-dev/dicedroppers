@@ -58,10 +58,10 @@ function Nav() {
   const logoPath = "/images/logo.png";
 
   return (
-    <div className={`nav`} id="myNav">
+    <div className="nav sticky" id="myNav">
       <div className="nav-logo-container">
-        <Link to="/" className="sticky nav-logo-link" exact={true}><img className="nav-logo" src={logoPath} alt="Logo" /></Link>
-        <Link to="/" className="sticky nav-name" exact={true}>Dice Droppers</Link>
+        <Link to="/" className="nav-logo-link" exact={true}><img className="nav-logo" src={logoPath} alt="Logo" /></Link>
+        <Link to="/" className="nav-name" exact={true}>Dice Droppers</Link>
         <a href="javascript:void(0);" className="icon" onClick={handleIcon}>
           <i className="fa fa-bars" />
         </a>

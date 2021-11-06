@@ -2,6 +2,7 @@
   background-color: var(--white);
   overflow: hidden;
   caret-color: var(--white);
+  margin-top: 53px;
 }
 
 .wrapper {
