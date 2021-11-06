@@ -1,34 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import WikiOverview from "./wiki-overview";
 import WikiContent from './wiki-content';
 import "./wiki-page.css";
+import * as DataApi from "../../../utils/data-api";
 
 function WikiPage( { directory, title } ) {
 
-  const overview = require(`../wiki-pages/${directory.toLowerCase()}/${title}/overview.json`);
-  const content = require(`../wiki-pages/${directory.toLowerCase()}/${title}/content.json`);
+  const [data, setData] = useState(require("./placeholder-data.json"));
 
-  const getHeaderNode = (section) => {
-    if (section[0] === "Default") return null;
-    return (
-      <h2>{section[0]}</h2>
-    );
-  };
+  useEffect(() => {
+    const doThing = async () => {
+      const newData = await DataApi.getData("people", "Karst_Sunborne")
+      setData(newData);
+      console.log(`JSON: ${data["General Info"]["Title"]}`);
+    };
+    doThing();
+  }, [data]);
 
-  const makeSection = (section) => {
-    return (
-      <div>
-        {getHeaderNode(section)}
-        <p>{section[1].map(content => <p>{content}</p>)}</p>
-      </div>
-    );
-  };
-
+  if (!data) return null;
   return (
     <div>
-      <WikiOverview overview={overview} />
-      <h1>{overview.General.Title}</h1>
-      <WikiContent content={content} />
+      <WikiOverview generalInfo={data["General Info"]} characterInfo={data["Character Info"]} />
+      <h1>{data["General Info"]["Title"]}</h1>
+      <WikiContent content={data["Content"]} />
     </div>
   );
 

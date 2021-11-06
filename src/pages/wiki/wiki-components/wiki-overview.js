@@ -7,27 +7,24 @@ import {
 } from "react-router-dom";
 import "./wiki-overview.css";
 
-function WikiOverview({ overview }) {
+function WikiOverview({ generalInfo, characterInfo }) {
 
-  const generalInfo = overview.General;
-  const characterInfo = overview.Character;
-
-  const urlTitle = generalInfo.Title.replace(" ", "_")
-
-  const text = "test-wiki"
+  const title = generalInfo["Title"];
+  const urlTitle = title.replace(" ", "_");
 
   const createOverviewRow = (item) => {
-    var label = item[0].replace("_", " ");
-    switch (item[0]) {
+    var key = item[0];
+    var value = item[1];
+    switch (key) {
       case "Title":
-      case "Image_Path": {
+      case "Image Path": {
         return;
       }
     }
     return (
       <div className="overview-row">
-        <div className="overview-item label">{label}</div>
-        <div className="overview-item">{item[1]}</div>
+        <div className="overview-item label">{key}</div>
+        <div className="overview-item">{value}</div>
       </div>
     );
   }
@@ -37,18 +34,18 @@ function WikiOverview({ overview }) {
       <div className="overview">
         <Link to={`/wiki/${urlTitle}`}>
           <div className="overview-item overview-header">
-            <h3>{generalInfo.Title}</h3>
+            <h3>{title}</h3>
           </div>
         </Link>
         <div className="overview-item image">
-          <img src={generalInfo.Image_Path} alt={generalInfo.Title} />
+          <img src={generalInfo["Image Path"]} alt={title} />
         </div>
         <div className="overview-items">
           {Object.entries(generalInfo).map(item => createOverviewRow(item))}
         </div>
         <div class="character-header">Character Info</div>
         <div className="overview-items">
-          {createOverviewRow( [ "Full_Name", generalInfo.Title ] )}
+          {createOverviewRow( [ "Full Name", title ] )}
           {Object.entries(characterInfo).map(item => createOverviewRow(item))}
         </div>
       </div>
