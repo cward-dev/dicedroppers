@@ -1,12 +1,16 @@
 import "../pages.css";
 import WikiPage from "./wiki-components/wiki-page";
+import parseUrlPath from "../../utils/parseUrlPath";
 
 function WikiHome() {
+
+  const pathComponents = parseUrlPath();
+  const fileName = pathComponents[1];
 
   return (
     <div className="page">
       <div className="wrapper">
-        <WikiPage directory="people" title="Karst_Sunborne" />
+        <WikiPage fileName={`${fileName}`} />
       </div>
     </div>
   );

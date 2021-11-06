@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import WikiOverview from "./wiki-overview";
 import WikiContent from './wiki-content';
 import "./wiki-page.css";
-import * as DataApi from "../../../utils/data-api";
+import getApiData from "../../../utils/getApiData";
 
-function WikiPage( { directory, title } ) {
+function WikiPage( { fileName } ) {
 
   const [data, setData] = useState(require("./placeholder-data.json"));
 
   useEffect(() => {
-    const doThing = async () => {
-      const newData = await DataApi.getData(directory, title)
+    const fetchData = async () => {
+      const newData = await getApiData(fileName)
       setData(newData);
     };
-    doThing();
-  }, []);
+    fetchData();
+  }, [fileName]);
 
   if (!data) return null;
   return (

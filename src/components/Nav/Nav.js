@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback, setState, classNames, state, toggleDropdown, isOpen, responsive } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
   NavLink
 } from "react-router-dom";
@@ -30,7 +27,7 @@ function useEventListener(eventName, handler, element = window) {
 
 function Nav() {
   const [ isActive, setIsActive ] = useState(false);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   
   const handleIcon = () => {
     if (isActive) {
@@ -60,11 +57,11 @@ function Nav() {
   return (
     <div className="nav sticky" id="myNav">
       <div className="nav-logo-container">
-        <Link to="/" className="nav-logo-link" exact={true}><img className="nav-logo" src={logoPath} alt="Logo" /></Link>
-        <Link to="/" className="nav-name" exact={true}>Dice Droppers</Link>
-        <a href="javascript:void(0);" className="icon" onClick={handleIcon}>
+        <Link to="/" className="nav-logo-link"><img className="nav-logo" src={logoPath} alt="Logo" /></Link>
+        <Link to="/" className="nav-name">Dice Droppers</Link>
+        <div className="icon" onClick={handleIcon}>
           <i className="fa fa-bars" />
-        </a>
+        </div>
       </div>
       {isActive || width > 960? 
         <div className={`links-container${isActive ? " active" : " inactive"}`}>

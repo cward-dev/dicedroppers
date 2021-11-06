@@ -1,18 +1,14 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./wiki-overview.css";
 
 function WikiOverview({ generalInfo, characterInfo }) {
 
   const title = generalInfo["Title"];
   const urlTitle = title.replace(" ", "_");
+  let childKeyCount = 0;
 
   const createOverviewRow = (item) => {
+    childKeyCount++;
     var key = item[0];
     var value = item[1];
     switch (key) {
@@ -20,13 +16,15 @@ function WikiOverview({ generalInfo, characterInfo }) {
       case "Image Path": {
         return;
       }
+      default: {
+        return (
+          <div className="overview-row" key={childKeyCount.toString()}>
+            <div className="overview-item label">{key}</div>
+            <div className="overview-item">{value}</div>
+          </div>
+        );   
+      }
     }
-    return (
-      <div className="overview-row">
-        <div className="overview-item label">{key}</div>
-        <div className="overview-item">{value}</div>
-      </div>
-    );
   }
 
   return (
@@ -43,7 +41,7 @@ function WikiOverview({ generalInfo, characterInfo }) {
         <div className="overview-items">
           {Object.entries(generalInfo).map(item => createOverviewRow(item))}
         </div>
-        <div class="character-header">Character Info</div>
+        <div className="character-header">Character Info</div>
         <div className="overview-items">
           {createOverviewRow( [ "Full Name", title ] )}
           {Object.entries(characterInfo).map(item => createOverviewRow(item))}

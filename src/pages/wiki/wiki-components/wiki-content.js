@@ -1,6 +1,11 @@
 function WikiContent( { content } ) {
 
+  let childKeyCount = 0;
+  let grandchildKeyCount = 0;
+
   const formatHtml = (pair) => {
+    grandchildKeyCount++;
+
     const key = pair[0];
     const value = pair[1];
 
@@ -9,21 +14,21 @@ function WikiContent( { content } ) {
     switch (trimmedKey) {
       case "p":
         node = (
-          <p dangerouslySetInnerHTML={{ __html: value }} />
+          <p key={grandchildKeyCount.toString()} dangerouslySetInnerHTML={{ __html: value }} />
         );
         break;
       case "div":
         node = (
-          <div dangerouslySetInnerHTML={{ __html: value }} />
+          <div key={grandchildKeyCount.toString()} dangerouslySetInnerHTML={{ __html: value }} />
         );
         break;
       case "img":
         node = (
-          <img dangerouslySetInnerHTML={{ __html: value }} />
+          <img key={grandchildKeyCount.toString()} alt="" dangerouslySetInnerHTML={{ __html: value }} />
         );
         break;
       default:
-        <div><p>Error</p></div>
+        <div key={grandchildKeyCount.toString()}><p>Error</p></div>
     }
 
     return node;
@@ -37,8 +42,10 @@ function WikiContent( { content } ) {
   };
 
   const makeSection = (section) => {
+    childKeyCount++;
+
     return (
-      <div>
+      <div key={childKeyCount.toString()}>
         {getHeaderNode(section)}
         {Object.entries(section[1]).map(content => formatHtml(content))}
       </div>

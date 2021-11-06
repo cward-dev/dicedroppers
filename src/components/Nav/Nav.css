@@ -69,6 +69,7 @@
   text-align: center;
   padding: 14px 16px;
   animation: fadeLeft 500ms ease-out backwards;
+  cursor: pointer;
 }
 
 .links-container {

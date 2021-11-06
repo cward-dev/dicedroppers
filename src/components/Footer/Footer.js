@@ -1,14 +1,7 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import "./Footer.css";
 import "../../pages/pages.css";
 
 function Footer() {
-  const logoPath = "/images/logo.png";
 
   return (
     <div className="footer">
