@@ -12,10 +12,9 @@ function WikiPage( { directory, title } ) {
     const doThing = async () => {
       const newData = await DataApi.getData("people", "Karst_Sunborne")
       setData(newData);
-      console.log(`JSON: ${data["General Info"]["Title"]}`);
     };
     doThing();
-  }, [data]);
+  }, []);
 
   if (!data) return null;
   return (
