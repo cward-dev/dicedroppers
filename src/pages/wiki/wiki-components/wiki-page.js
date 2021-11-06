@@ -4,17 +4,17 @@ import WikiContent from './wiki-content';
 import "./wiki-page.css";
 import getApiData from "../../../utils/getApiData";
 
-function WikiPage( { fileName } ) {
+function WikiPage() {
 
   const [data, setData] = useState(require("./placeholder-data.json"));
 
   useEffect(() => {
     const fetchData = async () => {
-      const newData = await getApiData(fileName)
+      const newData = await getApiData();
       setData(newData);
     };
     fetchData();
-  }, [fileName]);
+  }, []);
 
   if (!data) return null;
   return (

@@ -1,34 +1,32 @@
 function WikiContent( { content } ) {
 
   let childKeyCount = 0;
-  let grandchildKeyCount = 0;
-
+  
   const formatHtml = (pair) => {
-    grandchildKeyCount++;
-
     const key = pair[0];
     const value = pair[1];
 
     const trimmedKey = key.replace(/[0-9]/g, '');
+    const childKey = key.replace(/[a-zA-z]/g, '');
     let node;
     switch (trimmedKey) {
       case "p":
         node = (
-          <p key={grandchildKeyCount.toString()} dangerouslySetInnerHTML={{ __html: value }} />
+          <p key={childKey} dangerouslySetInnerHTML={{ __html: value }} />
         );
         break;
       case "div":
         node = (
-          <div key={grandchildKeyCount.toString()} dangerouslySetInnerHTML={{ __html: value }} />
+          <div key={childKey} dangerouslySetInnerHTML={{ __html: value }} />
         );
         break;
       case "img":
         node = (
-          <img key={grandchildKeyCount.toString()} alt="" dangerouslySetInnerHTML={{ __html: value }} />
+          <img key={childKey} alt="" dangerouslySetInnerHTML={{ __html: value }} />
         );
         break;
       default:
-        <div key={grandchildKeyCount.toString()}><p>Error</p></div>
+        <div key={childKey}><p>Error</p></div>
     }
 
     return node;
