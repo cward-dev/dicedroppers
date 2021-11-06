@@ -10,7 +10,7 @@ function WikiPage( { directory, title } ) {
 
   useEffect(() => {
     const doThing = async () => {
-      const newData = await DataApi.getData("people", "Karst_Sunborne")
+      const newData = await DataApi.getData(directory, title)
       setData(newData);
     };
     doThing();
