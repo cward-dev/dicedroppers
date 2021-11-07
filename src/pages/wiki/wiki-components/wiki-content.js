@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import ApiImage from "../../../components/ApiImage/ApiImage";
 import { getImageUrl } from "../../../utils/api-fetcher";
 
 function WikiContent( { content } ) {
@@ -23,9 +25,8 @@ function WikiContent( { content } ) {
         );
         break;
       case "img":
-        const imageUrl = getImageUrl(value);
         node = (
-          <img key={childKey} src={imageUrl} alt={value} />
+          <ApiImage childKey={childKey} fileName={value} />
         );
         break;
       default:
