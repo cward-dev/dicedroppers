@@ -1,8 +1,7 @@
 import "../pages.css";
 import WikiPage from "./wiki-components/wiki-page";
-import parseUrlPath from "../../utils/parseUrlPath";
 
-function WikiHome() {
+function WikiRoot() {
 
   return (
     <div className="page">
@@ -14,4 +13,4 @@ function WikiHome() {
 
 }
 
-export default WikiHome;
+export default WikiRoot;

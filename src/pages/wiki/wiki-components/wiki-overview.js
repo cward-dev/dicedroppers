@@ -1,19 +1,30 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { getImageUrl } from "../../../utils/api-fetcher";
 import "./wiki-overview.css";
 
 function WikiOverview({ generalInfo, characterInfo }) {
 
+  const [imageObjectUrl, setImageObjectUrl] = useState("");
+
   const title = generalInfo["Title"];
   const urlTitle = title.replace(" ", "_");
   let childKeyCount = 0;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const imageUrl = await getImageUrl();
+      setImageObjectUrl(imageUrl);
+    };
+    fetchData();
+  }, []);
 
   const createOverviewRow = (item) => {
     childKeyCount++;
     var key = item[0];
     var value = item[1];
     switch (key) {
-      case "Title":
-      case "Image Path": {
+      case "Title": {
         return;
       }
       default: {
@@ -36,7 +47,7 @@ function WikiOverview({ generalInfo, characterInfo }) {
           </div>
         </Link>
         <div className="overview-item image">
-          <img src={generalInfo["Image Path"]} alt={title} />
+          <img src={imageObjectUrl} alt={title} />
         </div>
         <div className="overview-items">
           {Object.entries(generalInfo).map(item => createOverviewRow(item))}

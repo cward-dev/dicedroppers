@@ -1,24 +1,23 @@
 {
   "General Info": {
-    "Title": "Placeholder",
-    "Type": "Placeholder",
-    "Status": "Placeholder",
-    "Played By": "Placeholder",
-    "Image Path": "/images/half-orc.jpeg"
+    "Title": "",
+    "Type": "",
+    "Status": "",
+    "Played By": ""
   },
   "Character Info": {
-    "Aliases": "Placeholder",
-    "Race": "Placeholder",
-    "Class": "Placeholder",
-    "Alignment": "Placeholder",
-    "Homeland": "Placeholder"
+    "Aliases": "",
+    "Race": "",
+    "Class": "",
+    "Alignment": "",
+    "Homeland": ""
   },
   "Content": {
     "null": {
-      "p1": "Placeholder."
+      "p1": ""
     },
     "Backstory": {
-      "p1": "Placeholder."
+      "p1": ""
     }
   }
 }
