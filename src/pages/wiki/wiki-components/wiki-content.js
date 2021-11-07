@@ -1,3 +1,5 @@
+import { getImageUrl } from "../../../utils/api-fetcher";
+
 function WikiContent( { content } ) {
 
   let childKeyCount = 0;
@@ -21,8 +23,9 @@ function WikiContent( { content } ) {
         );
         break;
       case "img":
+        const imageUrl = getImageUrl(value);
         node = (
-          <img key={childKey} alt="" dangerouslySetInnerHTML={{ __html: value }} />
+          <img key={childKey} src={imageUrl} alt={value} />
         );
         break;
       default:
