@@ -33,7 +33,7 @@ function WikiContent( { content } ) {
   }
 
   const getHeaderNode = (section) => {
-    if (section[0] === "null") return null;
+    if (section[0].toLowerCase() === "null") return null;
     return (
       <h2>{section[0]}</h2>
     );
