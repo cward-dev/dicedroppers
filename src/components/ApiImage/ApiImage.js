@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getImageUrl } from "../../utils/api-fetcher";
 import "./ApiImage.css";
 
-function ApiImage( { childKey, fileName } ) {
+function ApiImage( { childKey, fileName, floatDirection } ) {
 
   const [imageObjectUrl, setImageObjectUrl] = useState("");
 
@@ -15,7 +15,7 @@ function ApiImage( { childKey, fileName } ) {
   }, []);
 
   return (
-    <img key={childKey} src={imageObjectUrl} alt={fileName} />
+    <img key={childKey} className={`content-image ${floatDirection ? `float-${floatDirection}` : "float-none"}`} src={imageObjectUrl} alt={fileName} />
   );
 
 }

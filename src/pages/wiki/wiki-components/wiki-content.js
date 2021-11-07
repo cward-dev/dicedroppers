@@ -26,7 +26,7 @@ function WikiContent( { content } ) {
         break;
       case "img":
         node = (
-          <ApiImage childKey={childKey} fileName={value} />
+          <ApiImage childKey={childKey} fileName={value} floatDirection="left" />
         );
         break;
       default:
