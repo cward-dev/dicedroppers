@@ -18,7 +18,7 @@ function Home() {
     <div className="page">
       <div className="wrapper">
         <div className="splash">
-          <img className={`logo${isActive? " clicked": ""}`} src="/images/logo.png" alt="logo" onClick={handleClick} />
+          <img className={`logo${isActive? " clicked": ""}`} src="/images/logo-full.png" alt="logo" onClick={handleClick} />
           <h1>Dice Droppers</h1>
           <p>Welcome, adventurer.</p>
         </div>

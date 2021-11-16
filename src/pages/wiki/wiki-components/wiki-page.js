@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WikiOverview from "./wiki-overview";
 import WikiContent from './wiki-content';
 import "./wiki-page.css";
-import { getData } from "../../../utils/api-fetcher";
+import { getJsonData } from "../../../utils/api-fetcher";
 
 function WikiPage() {
 
@@ -10,7 +10,7 @@ function WikiPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const newData = await getData();
+      const newData = await getJsonData();
       setData(newData);
     };
     fetchData();

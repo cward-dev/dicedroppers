@@ -52,7 +52,7 @@ function Nav() {
   useEventListener("mouseup", clickHandler);
   useEventListener("resize", resizeHandler);
 
-  const logoPath = "/images/logo.png";
+  const logoPath = "/images/logo-white-outlined.png";
 
   return (
     <div className="nav sticky" id="myNav">

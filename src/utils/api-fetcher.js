@@ -2,7 +2,7 @@ import parseUrlPath from "./parseUrlPath";
 
 const baseUrl = "https://cward-dev.github.io/dicedroppers-api";
 
-export const getData = async (manualFileName) => {
+export const getJsonData = async (manualFileName) => {
   const pathParts = parseUrlPath();
   const folderName = pathParts[0];
   var fileName = pathParts[1];
