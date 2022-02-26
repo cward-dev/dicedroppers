@@ -66,12 +66,12 @@ function Nav() {
       {isActive || width > 960? 
         <div className={`links-container${isActive ? " active" : " inactive"}`}>
           <NavLink to="/" className="nav-item home" exact={true}>Home</NavLink>
-          <NavLink to="/blog" className="nav-item">Blog</NavLink>
-          <NavLink to="/episodes" className="nav-item">Episodes</NavLink>
+          {/* <NavLink to="/blog" className="nav-item">Blog</NavLink> */}
+          {/* <NavLink to="/episodes" className="nav-item">Episodes</NavLink> */}
           <NavLink to="/campaign-notes" className="nav-item">Campaign Notes</NavLink>
           <NavLink to="/meet-the-crew" className="nav-item">Meet The Crew</NavLink>
-          <NavLink to="/wiki/Karst_Sunborne" className="nav-item">Wiki</NavLink>
-          <NavLink to="/search" className="nav-item">Search</NavLink>
+          <a href="https://dicedroppers.fandom.com/wiki/DiceDroppers_Wiki" target="_blank" className="nav-item">Wiki</a>
+          {/* <NavLink to="/search" className="nav-item">Search</NavLink> */}
         </div> : null}
     </div>
   );

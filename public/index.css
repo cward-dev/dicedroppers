@@ -5,8 +5,11 @@
   --true-black: #000000;
   --primary: #AD343E;
   --primary-dark: #6E2127;
-  --beige: #EFF8E2;
-  --secondary: #0B4F6C;
+  --beige: #f0ece2;
+  --beige-dark: #e0dfdc;
+  --beige-darkest: #7f7b71;
+  --secondary: #0b4e6b;
+  --secondary-light: #1492c8;
   --test: #0ff00f;
 }
 

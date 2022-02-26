@@ -13,6 +13,23 @@
   animation: rotate 1.3s ease-out backwards;
 }
 
+.socialIconsWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media(min-width: 400px) {
+  .socialIcons {
+    width: 400px;
+  }
+}
+
 @keyframes rotate {
   0% {}
   25% {
